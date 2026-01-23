@@ -1,10 +1,10 @@
-NOM : Oboeuf
+NOM : Oboeuf Tristan
 
 Année de naissance : 2007
 
 Ville : Chambly
 
-Mail Personnel :
+Mail Personnel : tristanoboeuf9@gmail.com
 
 Bac et spé : BAC Pro SN
 
@@ -18,7 +18,7 @@ Option fin 1er Semestre ? : Indéfinie
 
 Avez vous un travail en dehors des cours ? : Je fais mon alternance
 
-Avez vous des connaissances en informatique : Virtualisation, homelab, réseaux, infrastructure, systeme et linux
+Avez vous des connaissances en informatique : Virtualisation, homelab, réseaux, infrastructure, systeme linux
 
 Vos Points Forts et Faibles : PF : Rigoureux , curieux , Déterminé ; Pfb :
 Nonchalent , oranisation
