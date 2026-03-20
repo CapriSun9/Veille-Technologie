@@ -39,13 +39,3 @@ Année 2025 (plusieurs dates) : gros outages AWS/Azure/GCP et de services SaaS p
 ​
 
 Fin 2025 – début 2026 : de plus en plus d’architectures recommandent un modèle hybride/multicloud (on‑prem + plusieurs clouds) pour réduire le risque d’un seul point de défaillance et reprendre le contrôle des coûts.
-​
-
-Synthèse orientée BTS SIO / homelab
-Pour l’admin système/réseau : ces actus mettent l’accent sur la maîtrise de la virtualisation (VMware, Hyper‑V, Proxmox/KVM), des concepts Zero Trust, et de l’architecture hybride (on‑prem + cloud).
-​
-
-Pour ton dossier de BTS : tu peux organiser ta veille en grands axes datés (guerre des GPU IA, explosion des coûts, retours de l’on‑prem, outage massifs, souveraineté UE) et montrer l’impact concret sur une PME ou un homelab (choix d’hyperviseur, sauvegarde, PRA, segmentation réseau).
-​
-
-Si tu veux, le prochain pas peut être : soit une frise chronologique propre pour le dossier, soit une fiche par “thème” (coûts, IA, sécurité, souveraineté) avec 3–4 dates clés à chaque fois.
