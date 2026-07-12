@@ -44,3 +44,17 @@ Toute la période : pénurie structurelle de mémoire DRAM liée à l'IA (HBM), 
 Outages, souveraineté et multicloud
 Année 2025 (plusieurs dates) : gros outages AWS/Azure/GCP et de services SaaS provoquent des interruptions touchant des millions d’utilisateurs, mettant en avant la fragilité systémique et les dépendances en chaîne (DNS, paiements, sécurité, etc.).
 Fin 2025 – début 2026 : de plus en plus d’architectures recommandent un modèle hybride/multicloud (on‑prem + plusieurs clouds) pour réduire le risque d’un seul point de défaillance et reprendre le contrôle des coûts.
+
+
+Mise a jour - juillet 2026
+Virtualisation & couts
+Ete 2026 : comparatif Proxmox VE vs VMware post-Broadcom - Proxmox VE estime a ~1 000 EUR/an contre 45 000 EUR+/an pour VMware (licence Broadcom). Renforce l'interet de l'open source pour les homelabs et PME, axe cle de mon projet Proxmox.
+
+Securite & CVE (cloud / cyber)
+Juin 2026 : CVE-2026-48567 - Azure HorizonDB, elevation de privileges, CVSS 10.0 (Patch Tuesday juin 2026).
+2026 : CVE-2026-20253 - Splunk Enterprise, authentification manquante sur fonction critique, ajoutee au catalogue CISA KEV (exploitation active). Souligne l'importance du patch management et de la supervision des logs.
+
+Sources :
+- Proxmox vs VMware 2026 : https://tech-insider.org/proxmox-vs-vmware-2026/
+- CVE-2026-48567 (CrowdStrike Patch Tuesday juin 2026) : https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-june-2026/
+- CVE-2026-20253 (CISA KEV) : https://www.cisa.gov/known-exploited-vulnerabilities-catalog
