@@ -52,6 +52,57 @@ Securite & CVE (homelab - juillet 2026)
 6 juillet 2026 : Pi-hole FTL v6.7 / Core v6.4.3 corrige 6 avis dont une RCE (injection config CivetWeb, GHSA-8j7w-m3cr-6q6x) et une elevation de privileges local (pihole vers root via logrotate, GHSA-h8w9-qx2v-wrww). Mettre a jour via la commande 'pihole -up'.
 2026 : Proxmox VE - "PinTheft" PSA-2026-00022-1 (CVE-2026-43494), elevation de privileges local (RDS + io_uring) ; et "DirtyFrag" PSA-2026-00019-1 (LPE noyau Linux, exploite dans la nature). Les deux corriges par les noyaux PVE a jour. Mise a jour via 'apt update' puis 'apt full-upgrade', suivi d'un reboot sur le noyau patche.
 
+
+Mise à jour - 2026-07-24 (semaine du 20-24 juillet 2026)
+
+Sécurité & CVE (virtualisation / cloud)
+- CVE-2026-53359 "Januscape" : use-after-free dans KVM x86 (shadow-paging subsystem Linux kernel). Vulnérabilité vieille de plusieurs années, rendue publique le 6 juillet 2026. OVHcloud publie un retour d'expérience sur le patching de cette faille à travers des dizaines de milliers de machines. Impact direct sur tous les environnements virtualisés KVM/cloud. Source : blog OVHcloud, 21 juillet 2026.
+- July 2026 Patch Tuesday (CrowdStrike) : CVE-2026-57092 - élévation de privilèges critique (CVSS 9.9) dans Microsoft Windows VMSwitch (use-after-free CWE-416). Attaquant authentifié peut élever ses privilèges sur le réseau avec une faible complexité. Source : CrowdStrike, 14 juillet 2026.
+- Rappel : CVE-2026-47652 (juin 2026) - RCE critique (CVSS 8.2) dans Windows Hyper-V (heap-based buffer overflow). Contexte permanent de vulnérabilités hyperviseur.
+
+Proxmox VE
+- Proxmox VE 9.2 (sorti mai 2026) : introduction du Dynamic Load Balancer pour clusters HA. Migre en direct les VM des noeuds chauds vers les noeuds froids automatiquement (CPU, mémoire temps réel). Noyau Linux 7.0 par défaut. Amélioration majeure du Cluster Resource Scheduler. Source : Proxmox Pulse, 6 juillet 2026.
+
+Hyperscalers & Cloud IA
+- Google publie son "2026 State of AI Infrastructure Report" : +80% des organisations doivent mettre à jour leur stack technique pour supporter les agents IA à l'échelle. Source : CIO Dive, 10 juillet 2026.
+- NVIDIA annonce un modèle de revenue-sharing et crédit (1er juillet 2026) pour les opérateurs de cloud IA. NVIDIA backstoppe le buildout d'infrastructure GPU (210 000 GPUs) pour les opérateurs capital-constraints. Source : Tech Times, 4 juillet 2026.
+- AWS SQS fête ses 20 ans (2006-2026). AWS Weekly Roundup (20 juillet) : One-click Lambda setup, modèles OpenAI GPT-5.6 sur Bedrock. Source : Deven Goratela, 20 juillet 2026.
+- Investissements IA hyperscalers confirmés à ~$725B en 2026 (Big-5). L'offre physique de capacité datacenter ne suit pas le rythme. Source : CFA Analysis / Q1 2026 earnings.
+
+Cloud cost optimization & multicloud
+- Multi-cloud et hybrid deviennent le nouveau défaut en 2026, notamment pour les équipes déployant des modèles IA. Objectifs : éviter le lock-in, optimiser le placement des données (compute locality, cache economics). Sources : nOps, MegaStorage Cloud, 2026.
+
+Souveraineté des données & cloud européen
+- Juin 2026 : la Commission européenne publie le "European Technological Sovereignty Package" - l'initiative la plus ambitieuse d'autonomie numérique européenne. Pièce centrale : le Cloud and AI Development Act (CADA), qui crée des obligations réglementaires, des standards de souveraineté et un plan d'investissement jusqu'en 2036. Source : CSA Research, juin 2026.
+- Le EU Data Act et le Digital Omnibus entrent en vigueur en 2026. Les niveaux de cloud souverain (Sovereign Cloud levels) se structurent. Source : Cyso Cloud, 2026.
+- La souveraineté numérique devient un enjeu de direction : données, IA, dépendance économique, autonomie stratégique européenne. Sources : eclipso, 13 juillet 2026 / eunews, 20 juillet 2026.
+
+VMware / Broadcom
+- La migration VMware vers le cloud s'accélère (de "slow-burn" à "urgent") en 2026. Les changements de licence Broadcom (VCF obligatoire pour nouveaux noeuds sur hyperscaler depuis octobre 2025, transition avant novembre 2026) poussent les clients à évaluer des alternatives. Source : MigrationCost.com, Sangfor, 2026.
+
+Outages
+- Aucun outage majeur hyperscaler détecté cette semaine (20-24 juillet 2026).
+
+Sources :
+- CVE-2026-53359 (Januscape) OVHcloud : https://blog.ovhcloud.com/cve-2026-53359-januscape-patching-campaign-lessons-learned-from-remediating-a-kvm-flaw-across-tens-of-thousands-of-machines/
+- July 2026 Patch Tuesday (CrowdStrike) : https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/
+- Proxmox VE 9.2 Dynamic Load Balancer : https://proxmoxpulse.com/articles/proxmox-dynamic-load-balancer-ha-clusters/
+- Google State of AI Infrastructure 2026 : https://www.ciodive.com/topic/cloud/
+- NVIDIA revenue-sharing AI cloud : https://www.techtimes.com/articles/319704/20260704/nvidia-revenue-sharing-ai-cloud-debuts-210000-gpus-flywheel-vendor-finance-risk.htm
+- AWS Weekly Roundup July 20 : https://devengoratela.com/2026/07/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/
+- Data Center Hardware July 2026 : https://www.datacenterknowledge.com/data-center-hardware/data-center-hardware-highlights-july-2026
+- EU Technological Sovereignty Package (CSA) : https://labs.cloudsecurityalliance.org/research/eu-tech-sovereignty-cloud-ai-enterprise-risk-v1-0-csa-styled/
+- Souveraineté numérique Europe (eclipso) : https://www.eclipso.de/blog/en/2026/07/13/digital-sovereignty-why-europe-must-now-regain-control-over-its-digital-future/
+- Souveraineté Europe (eunews) : https://www.eunews.it/en/2026/07/20/digital-sovereignty-europe-necessity/
+- Sovereign Cloud Europe (Luxsure) : https://www.luxsure.fr/en/2026/07/14/sovereign-cloud-can-europe-break-free-from-its-reliance-on-hyperscalers/
+- EU Cloud Rules 2026 (Cyso) : https://cyso.cloud/blog/digital-sovereignty-eu-cloud-rules-2026
+- VMware replacement 2026 (Sangfor) : https://www.sangfor.com/blog/cloud-and-infrastructure/vmware-replacement-guide-2026
+- Broadcom licensing advisory : https://broadcomaudits.com/blog/top-broadcom-advisory-firms/
+- VMware to cloud migration cost : https://migrationcost.com/vmware-to-cloud-migration-cost
+- Cloud cost optimization guide 2026 : https://multicloudoptimization.com/cloud-cost-optimization-guide/
+- Multi-cloud storage cost optimization 2026 : https://megastorage.cloud/multicloud-cost-optimization-storage-architects-2026
+
+
 Sources :
 - Proxmox vs VMware 2026 : https://tech-insider.org/proxmox-vs-vmware-2026/
 - CVE-2026-48567 (CrowdStrike Patch Tuesday juin 2026) : https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-june-2026/
