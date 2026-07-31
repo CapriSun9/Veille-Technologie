@@ -103,6 +103,47 @@ Sources :
 - Multi-cloud storage cost optimization 2026 : https://megastorage.cloud/multicloud-cost-optimization-storage-architects-2026
 
 
+Mise à jour - 2026-07-31 (semaine du 27-31 juillet 2026)
+
+Sécurité & CVE (virtualisation / cloud)
+- 29 juillet 2026 : VMSA-2026-0006 (Broadcom) - trois vulnérabilités critiques VMware. CVE-2026-59309 : bypass d'authentification (CVSS 9.8, non authentifié, réseau) dans le VMware Directory Service de vCenter, donnant accès au plan de gestion ; CVE-2026-59310 : RCE (CVSS 9.8) ; CVE-2026-47876 : exécution de code guest-to-host via VMXNET3 (CVSS 9.3, potentiel VM escape). Pas de workaround documenté pour les deux premières. Le correctif passe par vSphere 8.0 Update 3k, qui bloque temporairement le chemin d'upgrade vers VCF 9.1. À patcher en priorité sur tout environnement VMware. Sources : Rapid7, CyberSignal, AngrySysOps, 29-30 juillet 2026.
+- Contexte : des chaînes d'exploitation de trois vulnérabilités ESXi sont signalées actives en 2026 pour parvenir à un VM escape complet et compromettre l'hyperviseur. Source : vMoreCloud, 2026.
+
+Proxmox VE
+- RAS cette semaine : pas de nouvelle version (VE 9.2 avec Dynamic Load Balancer et PBS 4.2 restent les dernières, avril-mai 2026). Rester à jour sur le noyau patché (PinTheft/DirtyFrag).
+
+Hyperscalers & Cloud IA
+- Alphabet relève sa guidance capex 2026 à 195-205 Md$ (+15 Md$) ; la croissance cloud de Google Cloud s'accélère, mais les investisseurs sanctionnent les dépenses IA : Amazon, Meta et Microsoft chutent avant leurs résultats trimestriels. Source : CNBC, 28 juillet 2026.
+- NVIDIA investit jusqu'à 2,1 Md$ dans IREN : partenariat stratégique pour déployer jusqu'à 5 GW d'infrastructure IA alignée sur l'architecture DSX (le campus Sweetwater 2 GW au Texas en site flagship). IREN acquiert par ailleurs Mirantis pour 625 M$ (pipeline porté à 5,8 GW). Sources : Datacenter Knowledge, Invezz, 28-29 juillet 2026.
+- Lambda Labs lève 320 M$ pour étendre son cloud GPU dédié à l'IA. Source : TechHubBox, juillet 2026.
+
+Cloud cost optimization & multicloud
+- Pas de nouveauté majeure cette semaine ; les leviers 2026 restent le placement intelligent des données (compute locality, caches) et l'optimisation des coûts LLM (ex. billing attribution sur Amazon Bedrock).
+
+Souveraineté des données & cloud européen
+- 16 juillet 2026 : Airbus choisit Scaleway comme fournisseur de cloud souverain après un appel d'offres qui notait explicitement la protection contre les lois extraterritoriales non européennes. L'ensemble Airbus + Scaleway + Mistral forme la première chaîne de défense IA souveraine européenne de bout en bout. Sources : InfoQ, European Cloud, juillet 2026.
+
+VMware / Broadcom
+- Rappel du contexte licence 2026 : 100% abonnement, catalogue réduit à 4 bundles (VCF en tête), facturation par cœur avec minimum 16 cœurs/CPU, réseau de partenaires réduit de 4 000+ à ~300. Combiné au VMSA-2026-0006, la pression s'intensifie sur les clients VMware pour accélérer l'évaluation des alternatives (Proxmox, KVM, migration cloud). Sources : Redress Compliance, Schneider.im, 2026.
+
+Outages
+- Aucun outage majeur hyperscaler détecté cette semaine (27-31 juillet 2026) : status pages AWS, Azure et GCP nominaux au 30-31 juillet.
+
+Sources :
+- VMSA-2026-0006 (Rapid7) : https://www.rapid7.com/blog/post/etr-critical-vmware-vcenter-vulnerabilities-allow-authentication-bypass-and-remote-code-execution-cve-2026-59309-cve-2026-59310/
+- Détail CVE vCenter (CyberSignal) : https://www.thecybersignal.com/vmware-vcenter-cve-2026-59309-59310-vm-escape-2026/
+- vSphere 8.0 Update 3k (AngrySysOps) : https://angrysysops.com/2026/07/30/vsphere-8-0-update-3k-fixes-critical-cves-but-temporarily-blocks-the-vcf-9-1-upgrade-path/
+- ESXi exploité en 2026 (vMoreCloud) : https://vmorecloud.com/vmware-esxi-vulnerability-actively-exploited-in-2026-patch-guidance-for-admins/
+- Capex hyperscalers (CNBC) : https://www.cnbc.com/2026/07/28/hyperscalers-face-higher-capex-scrutiny-after-alphabet-report-panned.html
+- NVIDIA x IREN (Datacenter Knowledge) : https://www.datacenterknowledge.com/deals/nvidia-places-massive-ai-infrastructure-bet-on-iren-s-5-gw-pipeline
+- NVIDIA investit 2,1 Md$ dans IREN (Invezz) : https://www.tradingview.com/news/invezz:7ea93a735094b:0-nvidia-to-invest-up-to-2-1-billion-in-iren-ai-infrastructure-deal/
+- IREN acquiert Mirantis (Intellectia) : https://intellectia.ai/news/monitor/iren-acquires-mirantis-for-625m-to-boost-ai-infrastructure
+- Lambda Labs 320 M$ (TechHubBox) : https://www.techhubbox.com/lambda-raises-320-million-for-gpu-cloud-focused-on-ai/
+- Airbus x Scaleway (InfoQ) : https://www.infoq.com/news/2026/07/airbus-scaleway-sovereign-cloud/
+- Airbus x Scaleway (European Cloud) : https://european.cloud/2026/07/airbus-selects-scaleway/
+- Broadcom VMware licensing 2026 (Redress) : https://redresscompliance.com/broadcom-vmware-licensing-changes-explained
+- VMware licensing 2026 (Schneider.im) : https://www.schneider.im/vmware-by-broadcom-portfolio-simplification-and-transition-to-subscription/
+
 Sources :
 - Proxmox vs VMware 2026 : https://tech-insider.org/proxmox-vs-vmware-2026/
 - CVE-2026-48567 (CrowdStrike Patch Tuesday juin 2026) : https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-june-2026/
