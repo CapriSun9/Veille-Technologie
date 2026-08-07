@@ -152,3 +152,59 @@ Sources :
 - Proxmox Roadmap (PinTheft) : https://pve.proxmox.com/wiki/Roadmap
 - Proxmox DirtyFrag PSA : https://forum.proxmox.com/threads/dirty-frag-universal-linux-lpe-proxmox-vulnerable-in-the-wild-already.183363/
 
+
+
+Mise à jour - 2026-08-07 (semaine du 3-7 août 2026)
+
+Sécurité et CVE (virtualisation / cloud)
+- Pas de nouvelle CVE critique cloud/virtualisation publiée cette semaine. La chaîne VMSA-2026-0006 (CVE-2026-59309/59310/47876, vCenter/ESXi) reste le sujet n°1 : articles de rappel The Hacker News et SocRadar début août, confirmant la nécessité du correctif vSphere 8.0 Update 3k. À surveiller : le Patch Tuesday Microsoft du 11 août 2026, où Rapid7 attend la publication de la seconde faille d'une chaîne RCE (partiellement sous embargo depuis juillet). Sources : The Hacker News, SocRadar, Rapid7, août 2026.
+
+Proxmox VE
+- 5 août 2026 : support officiel arm64 de Proxmox VE (PVE 9.2) — première seconde architecture CPU supportée après x86-64. Même codebase, mêmes dépôts et même cycle de vie que la version x86-64 (QEMU 11.0, LXC 7.0, ZFS 2.4). Contraintes : hôtes UEFI+ACPI obligatoires, VMs en UEFI AAVMF ; SeaBIOS et une partie des features x86 non supportés. Le portage a été mené avec l'aide de NVIDIA et Supermicro ; Jeff Geerling l'a testé sur plateforme Ampere Altra. Sources : Proxmox, XDA, Jeff Geerling, 5-6 août 2026.
+- Proxmox VE 8 : fin de vie au 31 août 2026 — plus aucun patch de sécurité après cette date ; fenêtre ouverte pour migrer vers PVE 9.2 (checklist de mise à niveau disponible). Sources : Everywan, Falcon Internet, juillet-août 2026.
+- (Rattrapage) 28 juillet 2026 : Proxmox rejoint l'écosystème NVIDIA Mission Control comme couche de gestion HA pour les AI factories. Source : StorageReview, 28 juillet 2026.
+
+Hyperscalers et Cloud IA
+- Résultats T2 2026 : AWS +37 % à 42 Md$ (plus forte croissance en 18 trimestres) ; Amazon franchit pour la première fois 3 000 Md$ de capitalisation (4 août) ; Google Cloud +82 % ; Microsoft relève son capex 2026 à ~220 Md$ (53,1 Md$ de cash capex au T2). Le backlog cloud cumulé des Big Tech atteint ~2 300 Md$ ; le capex hyperscalers 2026 est estimé à plus de 860 Md$ (+80 % sur un an), vers ~1 200 Md$ en 2027 (BofA). Sources : Yahoo Finance, Seeking Alpha, AIM, 247wallst, 28 juillet-4 août 2026.
+- Dépenses cloud d'infrastructure : 143 Md$ au T2 2026, +43 % sur un an — plus haut depuis 8 ans (Synergy Research). Sources : The Register, 1er août 2026 / IT Pro, 3 août 2026.
+- 4 août 2026 : Volta Infra, nouveau cloud IA, lève 300 M$ à 2,4 Md$ de valorisation (+5 Md$ de financement), tour co-mené par a16z et Altimeter avec participation de NVIDIA et Michael Dell. Sources : Bloomberg, The Next Web, 4 août 2026.
+- 4 août 2026 : Runware lance le Sonic Inference Pod — datacenter modulaire portable en un seul conteneur, positionné comme alternative flexible aux campus massifs des hyperscalers. Source : TechCrunch, 4 août 2026.
+- 6 août 2026 : un fonds émirati étudie ~6,3 Md$ (1 000 Md¥) pour un datacenter IA au Japon. Source : Bloomberg, 6 août 2026.
+
+Cloud cost optimization et multicloud
+- RAS de nouveauté majeure cette semaine. Contexte : la croissance des dépenses (+43 % YoY) et le capex 2026 supérieur à 860 Md$ renforcent la pression FinOps ; le "cloud backlog" de 2 300 Md$ des hyperscalers confirme un marché toujours vendeur côté capacité IA.
+
+Souveraineté des données et cloud européen
+- RAS de nouveauté majeure côté Europe cette semaine. Rappel de contexte : Gartner prévoit 80 Md$ de dépenses sovereign cloud IaaS en 2026, avec l'Europe parmi les régions les plus dynamiques (+83 %).
+
+VMware / Broadcom
+- Nouveau durcissement licenciel rapporté : le minimum de cœurs facturés par commande passe de 16 à 72 cœurs (en plus du plancher existant de 16 cœurs/CPU), annoncé via le distributeur Arrow et effectif au 10 avril. Conséquence : un serveur 1 processeur / 8 cœurs se facture désormais 72 cœurs. Le sujet enflamme les discussions (Medium, LinkedIn) sur l'impact PME et accélère encore l'évaluation des alternatives (Proxmox, KVM, migration cloud). Sources : IT-Daily, Qual, Medium, août 2026.
+
+Outages
+- Aucun outage majeur hyperscaler détecté cette semaine (3-7 août 2026) : status pages AWS, Azure et GCP nominaux au 6-7 août.
+
+Sources :
+- Proxmox VE arm64 (annonce officielle) : https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-launches-official-arm64-support
+- Proxmox VE arm64 (forum) : https://forum.proxmox.com/threads/proxmox-virtual-environment-now-available-for-64-bit-arm-arm64.185527/
+- Proxmox arm64 caveats (XDA) : https://www.xda-developers.com/proxmox-releases-full-support-for-the-arm64-architecture-with-a-few-key-caveats/
+- Proxmox arm64 test Ampere Altra (Jeff Geerling) : https://www.jeffgeerling.com/blog/2026/proxmox-ve-arm-official/
+- PVE 8 EOL (Everywan) : https://everywan.com/en/blog/proxmox-ve-8-end-of-life-august-2026
+- PVE 8 EOL upgrade checklist (Falcon) : https://www.falconinternet.net/blog/proxmox-ve-8-end-of-life-august-2026-upgrade
+- Proxmox x NVIDIA Mission Control (StorageReview) : https://www.storagereview.com/news/proxmox-ve-joins-nvidias-mission-control-ecosystem-as-the-ha-layer-for-ai-factories
+- VMSA-2026-0006 recap (The Hacker News) : https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html
+- VMSA-2026-0006 recap (SocRadar) : https://socradar.io/blog/critical-vmware-vcenter-esx-flaws/
+- Patch Tuesday août 2026 à surveiller (Rapid7) : https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026/
+- Backlog cloud 2 300 Md$ (Yahoo Finance) : https://finance.yahoo.com/technology/article/big-techs-cloud-backlog-just-hit-23-trillion--and-its-feeding-ai-capex-plans-181459457.html
+- Hyperscalers post-earnings (Seeking Alpha) : https://seekingalpha.com/article/4929289-4-hyperscalers-one-message-the-ai-trade-isnt-over
+- Amazon 3 000 Md$ / AWS +37 % (247wallst) : https://247wallst.com/investing/2026/08/04/bezos-sells-4-billion-in-amazon-stock-as-it-hits-3-trillion-for-first-time-cramer-calls-it-a-buzzkill/
+- Capex Microsoft 220 Md$ (AIM) : https://analyticsindiamag.com/global-tech/big-techs-multi-billion-ai-infrastructure-bet-has-an-achilles-heel
+- Dépenses cloud +43 % au T2 (The Register) : https://www.theregister.com/off-prem/2026/08/01/enterprise-cloud-infrastructure-uptake-shows-no-sign-of-slowing/5281835
+- Dépenses cloud plus haut depuis 8 ans (IT Pro) : https://www.itpro.com/cloud/cloud-computing/cloud-infrastructure-spending-just-hit-an-eight-year-high
+- Volta Infra 300 M$ (Bloomberg) : https://www.bloomberg.com/news/articles/2026-08-04/nvidia-dell-back-ai-cloud-startup-volta-at-2-4-billion-value
+- Volta Infra (The Next Web) : https://thenextweb.com/news/volta-ai-cloud-300m-nvidia-dell-2-4bn
+- Runware Sonic Inference Pod (TechCrunch) : https://techcrunch.com/2026/08/04/is-the-future-of-data-centers-portable-runware-builds-a-pod-to-find-out/
+- UAE / Japon 6,3 Md$ (Bloomberg) : https://www.bloomberg.com/news/articles/2026-08-06/uae-fund-weighs-6-3-billion-ai-data-center-investment-in-japan
+- Sovereign cloud 80 Md$ 2026 (Gartner) : https://www.gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026
+- VMware minimum 72 cœurs (IT-Daily) : https://www.it-daily.net/shortnews-en/vmware-licensing-broadcom-raises-core-minimum-to-72-cores
+- VMware minimum 72 cœurs (Qual) : https://www.qual.co.uk/vmware-minimum-licensing-72-core/
+- VMware 72 cœurs, l'impact PME (Medium) : https://medium.com/weeklycloud/vmwares-new-72-core-minimum-licensing-is-a-mess-here-s-why-it-s-frustrating-everyone-1b8c177d6d7c
