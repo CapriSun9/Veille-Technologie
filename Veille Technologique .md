@@ -208,3 +208,52 @@ Sources :
 - VMware minimum 72 cœurs (IT-Daily) : https://www.it-daily.net/shortnews-en/vmware-licensing-broadcom-raises-core-minimum-to-72-cores
 - VMware minimum 72 cœurs (Qual) : https://www.qual.co.uk/vmware-minimum-licensing-72-core/
 - VMware 72 cœurs, l'impact PME (Medium) : https://medium.com/weeklycloud/vmwares-new-72-core-minimum-licensing-is-a-mess-here-s-why-it-s-frustrating-everyone-1b8c177d6d7c
+
+
+Mise à jour - 2026-08-14 (semaine du 10-14 août 2026)
+
+Sécurité et CVE (virtualisation / cloud)
+- EXPLOITATION ACTIVE de la chaîne VMware VMSA-2026-0006 (11 août 2026) : The Hacker News rapporte des attaques exploitant CVE-2026-59310 (directory traversal dans vCenter, CVSS 9.8) pour obtenir un accès persistant sur les systèmes ; en parallèle, Defused Cyber (via X) observe un pic de scans contre CVE-2026-59309 (auth bypass du VMware Directory Service/vmdir, CVSS 9.8), typique de tentatives d'exploitation massives. Les correctifs (vSphere 8.0 Update 3k, fin juillet 2026) sont disponibles — patching URGENT pour tout vCenter exposé. Sources : The Hacker News, Cybersecurity News, 11 août 2026.
+- Patch Tuesday Microsoft du 11 août 2026 : ~400 vulnérabilités corrigées (394 à 421 selon les décomptes), dont 42 critiques (37 RCE) et 3 zero-days (1 exploitée, 2 divulguées publiquement). Zero-day actif : CVE-2026-68820 — use-after-free dans le driver WinSock afd.sys, élévation de privilèges locale vers SYSTEM, exploitée par le groupe Lazarus (Operation Dream Job, ciblage d'entreprises de défense) avec déploiement du rootkit kernel FudModule (déjà utilisé via CVE-2024-38193). À corriger en priorité sur tous les postes Windows. Autres points notables : EoP SharePoint CVE-2026-62827 et CVE-2026-64921 (CVSS 8.8). C'est la suite attendue du Patch Tuesday de juillet (Rapid7 signalait une faille RCE sous embargo). Sources : BleepingComputer, SecurityWeek, The Hacker News, Talos, 11-12 août 2026.
+
+Proxmox VE
+- RAS de nouveauté cette semaine. Rappel : PVE 8 en fin de vie au 31 août 2026 (fenêtre de migration vers 9.2) ; support arm64 officiel depuis le 5 août 2026.
+
+Hyperscalers et Cloud IA
+- 10 août 2026 : Mark Zuckerberg annonce ~1 Md$ d'investissement dans les communautés locales où Meta construit ses AI data centers (programme communautaire pour accompagner les implantations). Source : Mazech, 10 août 2026.
+- 11 août 2026 : AdaniConneX alloue jusqu'à 30 000 crores (~3,6 Md$) pour le premier lot du hub AI data center de 1 GW de Google à Visakhapatnam (Inde). Source : Channeliam, 11 août 2026.
+- Analyses post-résultats (11-12 août) : Google Cloud affiche +82 % YoY, porté par ses puces IA custom (coûts de calcul inférieurs au GPU), tandis qu'Azure "peine à suivre" ; les hyperscalers reculent (~-2 % MSFT/AMZN/META le 12 août) dans un débat marché neoclouds vs hyperscalers. Sources : iBusiness, TMT Breakout, 11-12 août 2026.
+- NVIDIA confirme que la plateforme Vera Rubin NVL72 est en production et monte en charge chez CoreWeave, Google Cloud, Microsoft Azure et OCI (H2 2026). Source : NVIDIA Blog, 12 août 2026.
+- (Rattrapage) 6 août 2026 : OpenAI discuterait de la location d'un datacenter de 10 GW dans l'Ohio (projet Matador), avec un possible soutien financier de NVIDIA. Source : TechStock², 6 août 2026.
+
+Cloud cost optimization et multicloud
+- RAS de nouveauté majeure. Contexte : les synthèses de tendances cloud d'août 2026 (Kloudping, 10 août) confirment la pression FinOps — capex hyperscalers 725-770 Md$ en 2026, contrats multicloud, edge Kubernetes et sécurité cloud en tête des priorités.
+
+Souveraineté des données et cloud européen
+- RAS de nouveauté majeure cette semaine. Contexte : contrat-cadre souverain de 180 M€ de la Commission européenne attribué en avril 2026 à 4 consortiums (dont Proximus/Google Cloud) ; AWS European Sovereign Cloud opérationnel depuis janvier 2026.
+
+VMware / Broadcom
+- Analyse détaillée des coûts réels de migration hors VMware post-Broadcom : transformation multi-années (licences, outils, formation, re-architecture) avec coûts et risques chiffrés — alimente l'évaluation des alternatives (Proxmox, KVM, cloud). Source : iTechGuides, 10 août 2026.
+- Redress Compliance publie un advisory Broadcom à jour le 9 août 2026 sur la négociation des contrats VMware post-acquisition (levier = nombre de cœurs facturés et crédibilité du plan de sortie). Source : Redress, 9 août 2026.
+
+Outages
+- Aucun outage majeur hyperscaler détecté cette semaine (10-14 août 2026) : status pages AWS, Azure et GCP nominaux. Dernier incident notable : AWS CloudFront (16 juillet 2026), déjà traité.
+
+Sources :
+- Exploitation CVE-2026-59310 (The Hacker News) : https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html
+- Scans CVE-2026-59309 (Cybersecurity News) : https://cybersecuritynews.com/hackers-scan-vmware-vcenter-vulnerabilities/
+- Patch Tuesday août 2026 (BleepingComputer) : https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/
+- Patch Tuesday août 2026 (SecurityWeek) : https://www.securityweek.com/august-2026-patch-tuesday-microsoft-fixes-421-cves-one-exploited-zero-day/
+- CVE-2026-68820 / Lazarus (The Hacker News) : https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html
+- CVE-2026-68820 / FudModule (Cybersecurity News) : https://cybersecuritynews.com/windows-afd-sys-zero-day-exploited/
+- CVE-2026-68820 détails (SOC Prime) : https://socprime.com/blog/cve-2026-68820-actively-exploited-windows/
+- Patch Tuesday / SharePoint (Talos) : https://blog.talosintelligence.com/microsoft-patch-tuesday-for-august-2026/
+- Zuckerberg 1 Md$ communautés (Mazech) : https://mazech.com/2026/08/mark-zuckerberg-is-trying-to-solve-his-ai-data-center-problem-with-a-1-billion-giveaway/
+- AdaniConneX / Google Visakhapatnam (Channeliam) : https://channeliam.com/2026/08/11/adani-google-ai-data-center-visakhapatnam/
+- Google Cloud +82 % / Azure (iBusiness) : https://ibusiness.news/news/2026-08-11/google-cloud-and-aws-amzn-googl-msft-surge-while-microsoft-azure-struggles-to-keep-pace/
+- Neoclouds vs hyperscalers (TMT Breakout) : https://www.tmtbreakout.com/p/eod-wrap-cisco-csco-coherent-cohr
+- Vera Rubin NVL72 en production (NVIDIA Blog) : https://blogs.nvidia.com/blog/category/enterprise/
+- OpenAI 10 GW Ohio (TechStock²) : https://ts2.tech/en/fermi-frmi-jumps-after-openai-data-center-report-project-matador-lease-bets-return/
+- Tendances cloud août 2026 (Kloudping) : https://kloudping.com/cloud-computing-trends-august-2026/
+- Coûts de migration VMware (iTechGuides) : https://www.itechguides.com/a-long-costly-road-ahead-for-customers-abandoning-broadcoms-vmware/
+- Advisory Broadcom (Redress) : https://redresscompliance.com/vmware-contracts-post-broadcom-acquisition
