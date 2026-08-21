@@ -257,3 +257,54 @@ Sources :
 - Tendances cloud août 2026 (Kloudping) : https://kloudping.com/cloud-computing-trends-august-2026/
 - Coûts de migration VMware (iTechGuides) : https://www.itechguides.com/a-long-costly-road-ahead-for-customers-abandoning-broadcoms-vmware/
 - Advisory Broadcom (Redress) : https://redresscompliance.com/vmware-contracts-post-broadcom-acquisition
+
+
+Mise à jour - 2026-08-21 (semaine du 17-21 août 2026)
+
+Sécurité et CVE (virtualisation / cloud)
+- CVE-2026-48806 : bypass du sandbox Twig (moteur de templates PHP) via les clés de mapping dynamiques, permettant des appels non autorisés à __toString() (versions <= 3.26.0 ; correctif en 3.27.0). C'est un bypass résiduel du correctif de CVE-2026-47732 (GHSA-pr2w-4gpj-cpq4). Pertinent pour toute stack web PHP (panneaux d'admin, outils type panel de virtualisation). Source : GitHub Advisory GHSA-5v5v-ww74-355v, BitNinja, 17-19 août 2026.
+- (Contexte) StackWarp : faille matérielle AMD (Zen 1 à Zen 5, dont EPYC) affectant la confidentialité des VMs SEV-SNP — rappel que la sécurité cloud dépend aussi de la chaîne matérielle. Disclose janvier 2026, toujours citée dans les analyses cloud d'août 2026. Source : Aviatrix Threat Research Center.
+
+Proxmox VE
+- RAS de nouveauté majeure cette semaine. Rappel : PVE 8 en fin de vie au 31 août 2026 (plus de patchs de sécurité après cette date) — checklists de migration vers PVE 9.2 publiées début août (Falcon Internet). Écosystème communautaire actif (ex. PVE 9 sur Raspberry Pi 5).
+
+Hyperscalers et Cloud IA
+- 18-19 août 2026 : Pure Storage bondit de +22 % après l'annonce d'un contrat "top-four AI hyperscaler" pour ses baies flash ; Everpure (DirectFlash) décroche son 2e contrat avec un hyperscaler du top 5 (19 août). Le stockage flash haute densité devient un axe de différenciation des datacenters IA. Sources : The Outpost AI, DataCenterDynamics.
+- 18 août 2026 : NVIDIA investit 1,5 Md$ dans SB Energy (SoftBank) pour sécuriser l'alimentation électrique de ses infrastructures GPU. Source : The GPU Daily.
+- 18 août 2026 : AMD présente Helios, système IA rack-scale intégré (EPYC 9006 6e gén. + GPU Instinct MI455X + réseau Pensando + ROCm), rival direct de la plateforme NVIDIA Vera Rubin/NVL72. Source : Data Center Knowledge, 18 août 2026.
+- (Analyse) Jefferies : ~85 % des revenus cloud des hyperscalers US restent non-IA — l'IA ne représente que ~15 % du chiffre d'affaires cloud ; rappel de prudence sur le narratif "tout-IA". Source : BusinessToday, 14 août 2026.
+
+Cloud cost optimization et multicloud
+- L'inflation des prix cloud ralentit, mais la consommation (notamment workloads IA) continue de tirer les dépenses vers le haut — la pression FinOps reste forte sur le multicloud. Source : CIO Dive (analyse Tangoe), 17-18 août 2026.
+
+Souveraineté des données et cloud européen
+- Les règles de souveraineté des données fragmentées (par pays/opérateur) compliquent les décisions d'architecture cloud et les recrutements — la souveraineté devient une variable stratégique pour les opérateurs télécoms. Source : Hosting Journalist / LinkedIn, mi-août 2026.
+- (À venir) OpenNebula organise OneNext 2026 "Europe Sovereignty Event" le 8 octobre 2026 à Madrid : souveraineté au-delà des données (contrôle de la techno, des opérations et de l'infrastructure), architectures ouvertes pour cloud et IA. Source : opennebula.io.
+
+VMware / Broadcom
+- 17 août 2026 : Broadcom détaille le programme de VMware Explore 2026 (Las Vegas, 31 août - 3 septembre) — sessions techniques, labs, certifications, axe "Private AI Cloud" ; Explore on Tour dans plusieurs villes à l'automne. Source : GlobeNewswire / Broadcom.
+- (Contexte) Le marché continue de décortiquer la négociation des contrats VMware post-Broadcom (tarification basée sur le coût de départ du client plutôt que sur la facture précédente). Source : Redress Compliance, août 2026.
+
+Outages
+- Cloudflare : série d'incidents marquants mi-août 2026 — 13 pannes en 8 jours, dont une dégradation R2 (buckets ENAM) et une chute de disponibilité Durable Objects/Workflows (14 août) ; questions sur d'éventuelles pertes de données R2. Série à surveiller (CDN/DNS/edge critiques pour tout le web). Source : shattered.io, août 2026.
+- Namecheap : 28 h d'interruption (12-13 août) après un orage à Phoenix ayant coupé le refroidissement de son datacenter RadiusDC — rappel de la fragilité des couches physiques. Source : Topsite Hosters, août 2026.
+- 18 août 2026 : panne mondiale des services Google Nest/Home côté cloud. Pas d'outage majeur AWS/Azure/GCP cette semaine (status pages nominaux).
+
+Sources :
+- CVE-2026-48806 Twig (GitHub Advisory) : https://github.com/advisories/GHSA-5v5v-ww74-355v
+- CVE-2026-48806 (BitNinja) : https://bitninja.com/blog/cve-2026-48806-critical-twig-vulnerability-alert/
+- StackWarp AMD SEV-SNP (Aviatrix) : https://aviatrix.ai/threat-research-center/amd-stackwarp-hardware-flaw-2026-cloud-virtualization-exposure/
+- PVE 8 EOL / migration (Falcon Internet) : https://www.falconinternet.net/blog/proxmox-ve-8-end-of-life-august-2026-upgrade
+- Pure Storage hyperscaler deal (The Outpost AI) : https://theoutpost.ai/news-story/pure-storage-soars-on-landmark-ai-hyperscaler-deal-signaling-shift-in-data-storage-landscape-9119/
+- Everpure 2e contrat hyperscaler (DataCenterDynamics) : https://www.datacenterdynamics.com/en/news/everpure-secures-contract-from-top-five-hyperscaler-for-its-flash-storage-offering/
+- NVIDIA / SB Energy 1,5 Md$ (The GPU Daily) : https://thegpu.ai/p/gpu-daily-2026-08-18
+- AMD Helios (Data Center Knowledge) : https://www.datacenterknowledge.com/data-center-hardware/data-center-hardware-highlights-august-2026
+- 85 % revenus hyperscalers non-IA (BusinessToday) : https://www.businesstoday.in/technology/story/the-ai-reality-check-85-of-hyperscalers-cloud-revenue-is-still-non-ai-549289-2026-08-14
+- Inflation cloud / coûts IA (CIO Dive) : https://www.ciodive.com/news/hyperscaler-inflation-slows-cloud-consumption-grows-tangoe/740270/
+- Souveraineté fragmentée (Hosting Journalist) : https://www.linkedin.com/posts/hostingjournalist-com_fragmented-data-sovereignty-rules-raise-compliance-activity-7450252028632764416-V0Pe
+- OneNext 2026 Madrid (OpenNebula) : https://opennebula.io/techdays/europe-sovereignty-event/
+- VMware Explore 2026 (GlobeNewswire) : https://www.globenewswire.com/news-release/2026/08/17/3346137/19933/en/vmware-explore-2026-brings-technical-sessions-labs-and-certs-to-it-practitioners-arming-them-for-the-private-ai-cloud-era.html
+- Négociation contrats VMware (Redress) : https://redresscompliance.com/vcf-negotiation-escalation-ladder-timing
+- Cloudflare 13 pannes / R2 (shattered.io) : https://shattered.io/cloudflare-outage-august-2026/
+- Namecheap outage Phoenix (Topsite Hosters) : https://topsitehosters.com/blog/namecheap-outage-august-2026-what-happened/
+- Google Nest/Home outage (SeminarsOnly) : https://seminarsonly.com/news/is-google-home-down-outage-status/
