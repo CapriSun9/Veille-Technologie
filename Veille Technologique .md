@@ -308,3 +308,63 @@ Sources :
 - Cloudflare 13 pannes / R2 (shattered.io) : https://shattered.io/cloudflare-outage-august-2026/
 - Namecheap outage Phoenix (Topsite Hosters) : https://topsitehosters.com/blog/namecheap-outage-august-2026-what-happened/
 - Google Nest/Home outage (SeminarsOnly) : https://seminarsonly.com/news/is-google-home-down-outage-status/
+
+Mise à jour - 2026-09-04 (semaine du 31 août - 4 septembre 2026)
+
+Sécurité et CVE (virtualisation / cloud)
+- VMware vCenter CVE-2026-59309 et CVE-2026-59310 (CVSS 9.8) toujours activement exploitées : Rapid7 et SecurityWeek confirment que CVE-2026-59310 (directory traversal dans le Syslog server vCenter) est dans le collimateur des attaquants, avec exploitation par un APT lié à la Chine déployant un ransomware dérivé de Babuk dans les 72h suivant la divulgation du patch (Vici Security, août 2026). Le patch de fin juillet (vSphere 8.0 Update 3k) reste URGENT pour tout vCenter exposé.
+- VMM Escape Vulnerability (Glasswing) : bypass d'isolation de l'hyperviseur, classe de vulnérabilité la plus sévère en environnement virtualisé cloud/entreprise car elle invalide tous les contrôles de sécurité au-dessus de la couche hyperviseur (Decryption Digest, juillet 2026).
+- SAP Commerce Cloud CVE-2026-58231 exploitée dans les 72h suivant la divulgation du correctif.
+
+Proxmox VE
+- ANNONCE MAJEURE (2 septembre 2026) : Proxmox Server Solutions GmbH étend son support entreprise au 24/7 (effectif au 19 octobre 2026) ET lance Proxmox North America Inc. (Kingston, Ontario, Canada) — nouvelle filiale dédiée aux ventes, account management et support technique pour les fuseaux horaires Amériques. Trois niveaux de support : Community (gratuit), Standard (8/5, 500 EUR/CPU/an) et Premium (24/7, 2h de réponse, 1100 EUR/CPU/an). Cela supprime un des freins historiques à l'adoption de Proxmox en entreprise : l'absence de support 24/7 officiel. Source : Proxmox Press Release, 2 sept. 2026 ; Virtualization Howto, 3 sept. 2026.
+- (Rappel) Proxmox VE for ARM64 disponible depuis le 5 août 2026 ; PVE 9.2 avec Dynamic Load Balancer depuis mai 2026 ; PVE 8 en fin de vie au 31 août 2026 (fenêtre de migration maintenant fermée).
+
+Hyperscalers et Cloud IA
+- 2 septembre 2026 : Le CEO de NVIDIA, Jensen Huang, presse les ministres du G20 de traiter la capacité de calcul IA et les datacenters comme des infrastructures nationales critiques. Il souligne l'engagement de NVIDIA de 500 Md$ dans la production technologique domestique. Source : TechXplore, 2 sept. 2026.
+- 3 septembre 2026 : Jensen Huang confirme que Hugging Face restera une plateforme ouverte pour tout l'écosystème IA. Source : Gizmodo, 3 sept. 2026.
+- Les hyperscalers (Alphabet, Amazon, Meta, Microsoft, Oracle) sont sur une trajectoire de capex combiné de 775-800 Md$ en 2026 (+64 % sur 2025). Le rapport Q2 d'Alphabet (hausse de la prévision capex) a fait chuter les actions des autres hyperscalers fin juillet. Source : CNBC, 28 juillet 2026.
+- Jefferies (août 2026) : ~85 % des revenus cloud des hyperscalers US restent non-IA — l'IA ne représente que ~15 % du chiffre d'affaires cloud.
+
+Cloud cost optimization et multicloud
+- Cloud Security Alliance publie une synthèse des meilleures techniques d'optimisation des coûts cloud en 2026 : combinaison de pratiques FinOps continues, d'insights AI-driven et de smart resource management. Points clés : rightsizing des instances, optimisation des tiers de stockage, automatisation des workflows. Source : CSA, 12 juin 2026.
+- Les guides 2026 (CloudZero, OpsioCloud, Growin) confirment la tendance : la maturité multi-cloud exige désormais discipline architecturale et précision financière, notamment pour les workloads GPU intensifs.
+
+Souveraineté des données et cloud européen
+- La Commission européenne publie (1er juin 2026) un "Sovereign Cloud Framework" détaillé — outil d'évaluation des prestataires de cloud souverain pour les marchés publics, en réponse à l'intérêt massif des administrations et entreprises IT. Le cadre s'inscrit dans l'EU Cloud and AI Development Act (CADA) présenté au Q1 2026. Source : European Commission, 1er juin 2026.
+- Analyse LinkedIn (Claraz) : la souveraineté cloud européenne en 2026 oscille entre aspiration et réalité — les couches légales, techniques et opérationnelles progressent mais restent fragmentées entre États membres.
+
+VMware / Broadcom
+- VMware Explore 2026 (Las Vegas, 31 août - 3 septembre 2026) : 400+ sessions techniques, hands-on labs, certifications, centré sur VMware Cloud Foundation (VCF) comme socle du "Private AI Cloud".
+- ANNONCES MAJEURES de VMware Explore :
+  1. VMware Private AI Cloud — nouvelle offre permettant aux entreprises de scaler l'IA de manière cost-effective avec sécurité renforcée et gouvernance on-premise. Le cloud privé devient "operating layer" pour l'IA d'entreprise.
+  2. VMware AI Factory — infrastructure automation incluant des VCF AI ReadyNodes certifiés par Dell, Cisco, Lenovo, Supermicro ; permet un contrôle total sur l'AI tokenomics (coûts d'inférence).
+  3. VCF 9.1.1 — nouvelles capacités AI et Kubernetes, assistant conversationnel IA pour workflows quotidiens, durcissement de la sécurité.
+  4. vSphere 9.1 certifié NVIDIA-Certified Hypervisor — les workloads AI/HPC sur VCF sont certifiés pour fonctionner à performance quasi-native (bare metal).
+- Sources : VMware Blogs, 3 sept. 2026 ; NextPlatform, 1er sept. 2026 ; StorageNewsletter, 2 sept. 2026 ; The Cube Research, 3 sept. 2026.
+- (Contexte) Licences perpétuelles VMware supprimées, remplacées par bundles d'abonnement VCF avec licensing par cœur physique (min. 16 cœurs/socket). Pénalité de 20 % pour renouvellement tardif. Source : Redress Compliance, 2026.
+
+Outages
+- 1er septembre 2026 : Panne GCP us-central1-b — 15 services Google Cloud impactés pendant 4h08m (dégradation réseau, perte de paquets). Touché : Compute Engine, GKE, BigQuery, Cloud Storage, Cloud SQL. Cause : incident réseau dans la zone us-central1-b. Source : shattered.io, Google Cloud Status Dashboard.
+- (Rappel) Cloudflare : série de 13 pannes en 8 jours mi-août 2026 (R2, Durable Objects/Workflows).
+
+Sources :
+- VMware vCenter CVE (SecurityWeek) : https://www.securityweek.com/critical-vmware-vcenter-vulnerability-in-attackers-crosshairs/
+- VMware vCenter exploitation APT (Vici Security) : https://www.vicisecurity.com/blog/critical-flaws-exploited-within-days-august-2026-patch-window/
+- VMM Escape Glasswing (Decryption Digest) : https://www.decryptiondigest.com/blog/vmm-escape-cve-2026-glasswing-hypervisor-security
+- Proxmox 24/7 Support + North America (Proxmox) : https://www.proxmox.com/en/about/company-details/press-releases/proxmox-24-7-support-and-proxmox-north-america/
+- Proxmox 24/7 analyse (Virtualization Howto) : https://www.virtualizationhowto.com/2026/09/proxmox-just-removed-one-of-its-biggest-weaknesses/
+- NVIDIA G20 (TechXplore) : https://techxplore.com/news/2026-09-nvidia-boss-g20-ministers-ai.html
+- NVIDIA Hugging Face (Gizmodo) : https://gizmodo.com/nvidia-ceo-says-hugging-face-will-remain-an-open-platform-for-the-entire-ai-ecosystem-2000806742
+- Hyperscaler capex scrutiny (CNBC) : https://www.cnbc.com/2026/07/28/hyperscalers-face-higher-capex-scrutiny-after-alphabet-report-panned.html
+- Cloud cost optimization 2026 (CSA) : https://cloudsecurityalliance.org/blog/2026/06/12/top-cloud-cost-optimization-techniques-in-2026-for-maximum-roi
+- EU Sovereign Cloud Framework (European Commission) : https://commission.europa.eu/news-and-media/news/sovereign-cloud-framework-explained-2026-06-01_en
+- EU cloud sovereignty analysis (LinkedIn) : https://www.linkedin.com/pulse/european-cloud-sovereignty-2026-reality-vs-aspiration-claraz--9ikee
+- VMware Explore Private AI Cloud (NextPlatform) : https://www.nextplatform.com/cloud/2026/09/01/vmware-intros-private-ai-cloud-ai-factory-as-workloads-shift-to-on-prem/5293559
+- VMware Explore AI Factory (StorageNewsletter) : https://www.storagenewsletter.com/2026/09/02/vmware-explore-2026-broadcom-introduces-vmware-private-ai-cloud-enabling-enterprises-to-scale-ai-cost-effectively-operate-more-securely-and-innovate-rapidly/
+- VMware AI Factory VCF 9.1.1 (VMware Blogs) : https://blogs.vmware.com/cloud-foundation/2026/09/03/explore-2026-vmware-ai-factory-and-other-new-ai-innovations-in-vcf/
+- VCF 9.1.1 AI Kubernetes (VMware Blogs) : https://blogs.vmware.com/cloud-foundation/2026/09/03/new-ai-and-kubernetes-private-cloud-operations-capabilities-in-vmware-cloud-foundation-9-1-1/
+- VMware Explore wrap-up (The Cube Research) : https://thecuberesearch.com/vmware-explore-2026-wrap-up-private-cloud-becomes-the-operating-layer-for-enterprise-ai/
+- GCP us-central1-b outage (shattered.io) : https://shattered.io/gcp-us-central1-b-outage-15-services-2026/
+- GCP incident details (Google Cloud Status) : https://status.cloud.google.com/incidents/J5ia5t9p3g9Q5Wi7r8Ev
+- Broadcom VMware licensing (Redress) : https://redresscompliance.com/broadcom-vmware-licensing-changes-explained
