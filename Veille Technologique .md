@@ -348,6 +348,48 @@ Outages
 - 1er septembre 2026 : Panne GCP us-central1-b — 15 services Google Cloud impactés pendant 4h08m (dégradation réseau, perte de paquets). Touché : Compute Engine, GKE, BigQuery, Cloud Storage, Cloud SQL. Cause : incident réseau dans la zone us-central1-b. Source : shattered.io, Google Cloud Status Dashboard.
 - (Rappel) Cloudflare : série de 13 pannes en 8 jours mi-août 2026 (R2, Durable Objects/Workflows).
 
+
+Compléments - Veille approfondie du 04/09/2026 (sujets supplémentaires)
+
+Investissements Datacenters & Hyperscalers (été 2026)
+- Google augmente sa prévision de capex 2026 à 195-205 Md$ (+15 Md$ supplémentaires), confirmant une accélération sans précédent des investissements IA/Cloud. Le pipeline des datacenters n'a jamais été aussi fort : commandes records, campus multi-gigawatts annoncés partout dans le monde. Source : Data Centre News (Substack), 24 juillet 2026.
+- OpenAI annonce un datacenter de 20 Md$ en Géorgie (Effingham County). Source : Data Centre News, 24 juillet 2026.
+- MGX (Émirats) injecte 5 Md$ dans un développeur américain de datacenters. Source : Data Centre News, 24 juillet 2026.
+- Pure DC lève 1,3 Md€ supplémentaires pour son campus AI européen. Source : Data Centre News, 24 juillet 2026.
+- Microsoft va financer l'expansion européenne de Mistral AI via un deal multi-milliards. Source : Data Centre News, 24 juillet 2026.
+- Fluidstack (cloud IA) lève 830 M$ en Série A. Source : Data Centre News, 24 juillet 2026.
+- Meta/Anthropic en discussions pour un deal datacenter allant jusqu'à 10 Md$. Source : Data Centre News, 24 juillet 2026.
+- IREN signe 2,8 Md$ de contrats avec des développeurs AI majeurs, relève son objectif ARR 2026 à +4 Md$. Source : Data Centre News, 24 juillet 2026.
+
+IA Hardware - Course aux puces (juillet-août 2026)
+- NVIDIA Blackwell Ultra confirmé : double la capacité mémoire HBM3e du B100 standard, crucial pour les context windows des modèles frontier. Nouveaux détails sur l'architecture Rubin (prévue 2027) avec interconnect fabric améliorant le scaling multi-GPU. Source : Skycrumbs, 28 juillet 2026.
+- AMD Instinct MI400 : production limitée démarrée, performances compétitives avec Blackwell sur inference/fine-tuning à des prix attractifs pour les hyperscalers cherchant à diversifier leur supply chain. ROCm progresse mais reste en retard sur CUDA. Source : Skycrumbs, 28 juillet 2026.
+- Google TPU v6 (Trillium) : désormais plus largement disponible via Google Cloud. Source : Skycrumbs, 28 juillet 2026.
+- AWS Trainium 3 : disponibilité limitée en juillet pour clients sélectionnés. Amélioration significative du software tooling, prix attractif pour les startups AI. Source : Skycrumbs, 28 juillet 2026.
+- Course à l'inference : Groq, Cerebras et SambaNova gagnent du terrain avec des puces spécialisées inference (latence <100ms). Le shift de l'entraînement vers l'inférence est la tendance clé de mi-2026. Source : Skycrumbs, 28 juillet 2026.
+- Contrainte GPU 2024-2025 s'atténue : les délais H100/B100 se réduisent, le marché spot se normalise, mais la demande hyperscaler reste élevée. Source : Skycrumbs, 28 juillet 2026.
+
+CVE et Sécurité (compléments)
+- Le hub CyberUpdates365 recense les CVE critiques 2026 : VMware ESXi sandbox escape, Adobe ColdFusion CVE-2026-48282 (RCE actif), SharePoint CVE-2026-45659 (RCE non authentifié), LiteLLM Critical RCE (AI infrastructure), BeyondTrust CVE-2026-40138 (auth bypass IAM), Cisco ASA Zero-Day RCE (nation-state actors), Splunk CVE-2026-20253. Source : CyberUpdates365, 15 juillet 2026 (mis à jour 29 juillet).
+- Proxmox PSA-2026-00014-1 : correctif de sécurité pour les API endpoints VNC — permettait à des attaquants privilégiés de détourner les sessions VNC et deviner le mot de passe VNC. Source : Proxmox Roadmap, juillet 2026.
+
+Souveraineté des données et cloud européen (compléments)
+- Mistral AI : poussée souveraine française avec 1,4 Md$ dédiés aux datacenters européens, en ligne avec la vision Macron. Prévisions : 1 Md€ de revenus en 2026, nouvelles acquisitions. Source : GlobalCodeMaster, juillet 2026.
+- Startups canadiennes migrent vers des fournisseurs cloud européens (LifeinCloud) pour naviguer les lois strictes sur la souveraineté des données et les risques géopolitiques. Source : Noah News, 2026.
+- Analyse Curious Minds : la souveraineté est une question de juridiction légale, pas de localisation des serveurs — implications majeures pour les stratégies cloud européennes. Source : Curious Minds, 2026.
+
+Cloud Cost Optimization
+- HCL Software : comment les plateformes FinOps pilotées par l'IA transforment la gestion des coûts cloud en 2026 — rightsizing multicloud automatisé (AWS, Azure, GCP). Source : HCL Software Blog, 2026.
+- ServiceNow Cloud+ (CCM) : positionné comme leader FinOps pour 2026, avec contrôles budgétaires proactifs SaaS et AI. Source : ServiceNow Community, 2026.
+
+Outages Cloud (compléments - août 2026)
+- Août 2026 : 55% d'uptime seulement sur les services trackés. 4 jours sans aucune panne majeure. Grosse panne Microsoft 365 fin août. Source : isinternetup.com, août 2026.
+- Axis Intelligence : 9 outages AWS, Azure, GCP, Cloudflare et DENIC recensés en août 2026 avec Diagnostic Lag Ratio pour chaque. Source : Axis Intelligence, 9 août 2026.
+
+Licences VMware/Broadcom (précisions)
+- Le modèle de licensing VMware/Broadcom s'est stabilisé en 2025 sans nouveau changement annoncé pour 2026. Les licences perpétuelles définitivement remplacées par abonnements VCF par cœur physique (min. 16 cœurs/socket). Pénalité de 20% pour renouvellement tardif introduite. Le mode déconnecté (air-gapped) reste supporté : pas de vérification d'activation cloud requise tant que l'abonnement est valide, mais VCF 9.0 introduit un mode connecté optionnel pour faciliter le reporting d'usage. Source : Redress Compliance, 2026 ; Schneider.im, 15 juin 2026 ; Acronis, 26 mars 2026 ; Stormagic, 19 mai 2026.
+
+
 Sources :
 - VMware vCenter CVE (SecurityWeek) : https://www.securityweek.com/critical-vmware-vcenter-vulnerability-in-attackers-crosshairs/
 - VMware vCenter exploitation APT (Vici Security) : https://www.vicisecurity.com/blog/critical-flaws-exploited-within-days-august-2026-patch-window/
@@ -368,3 +410,18 @@ Sources :
 - GCP us-central1-b outage (shattered.io) : https://shattered.io/gcp-us-central1-b-outage-15-services-2026/
 - GCP incident details (Google Cloud Status) : https://status.cloud.google.com/incidents/J5ia5t9p3g9Q5Wi7r8Ev
 - Broadcom VMware licensing (Redress) : https://redresscompliance.com/broadcom-vmware-licensing-changes-explained
+- Data Centre News - Weekly Review 24/07/2026 (Substack) : https://datacentrenews.substack.com/p/weekly-data-centre-news-24072026
+- AI Hardware July 2026 (Skycrumbs) : https://skycrumbs.com/blog/ai-hardware-news-july-2026
+- Critical CVE 2026 Hub (CyberUpdates365) : https://cyberupdates365.com/cve-vulnerabilities-2026-enterprise-security-hub/
+- Proxmox Roadmap - PSA-2026-00014 : https://pve.proxmox.com/wiki/Roadmap
+- Mistral AI souveraineté France (GlobalCodeMaster) : https://globalcodemaster.com/frances-sovereign-ai-surge-mistral-ais-dollar14b-european-data-centre-push-and-macrons-vision
+- Startups canadiennes vers cloud européen (Noah News) : https://noah-news.com/canadian-startups-turn-to-european-cloud-providers-to-navigate-data-sovereignty-and-compliance/
+- Data sovereignty analysis (Curious Minds) : https://curiousminds.info/technology-ai/sovereignty-is-a-pipe-not-a-passport-2/
+- AI FinOps Cloud Cost 2026 (HCL) : https://www.hcl-software.com/blog/myxalytics/how-ai-driven-finops-platforms-will-transform-cloud-cost-management-in-2026
+- ServiceNow Cloud+ FinOps (ServiceNow Community) : https://www.servicenow.com/community/cloud-cost-management-articles/cloud-is-here-and-servicenow-ccm-is-leading-finops-into-2026/ta-p/3458789
+- Cloud Outages August 2026 (isinternetup) : https://www.isinternetup.com/outages/2026/august
+- Cloud Outage Tracker 2026 (Axis Intelligence) : https://axis-intelligence.com/cloud-outage-tracker/
+- VMware licensing 2026 (Redress Compliance) : https://redresscompliance.com/broadcom-vmware-licensing-changes-explained
+- VMware licensing guide (Schneider.im) : https://www.schneider.im/vmware-by-broadcom-portfolio-simplification-and-transition-to-subscription/
+- VMware licensing cloud providers (Acronis) : https://www.acronis.com/en/blog/posts/vmware-licensing-changes/
+- VMware licensing stabilization (Stormagic) : https://stormagic.com/company/blog/vmware-licensing-changes/
