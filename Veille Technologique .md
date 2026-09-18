@@ -389,6 +389,37 @@ Outages Cloud (compléments - août 2026)
 Licences VMware/Broadcom (précisions)
 - Le modèle de licensing VMware/Broadcom s'est stabilisé en 2025 sans nouveau changement annoncé pour 2026. Les licences perpétuelles définitivement remplacées par abonnements VCF par cœur physique (min. 16 cœurs/socket). Pénalité de 20% pour renouvellement tardif introduite. Le mode déconnecté (air-gapped) reste supporté : pas de vérification d'activation cloud requise tant que l'abonnement est valide, mais VCF 9.0 introduit un mode connecté optionnel pour faciliter le reporting d'usage. Source : Redress Compliance, 2026 ; Schneider.im, 15 juin 2026 ; Acronis, 26 mars 2026 ; Stormagic, 19 mai 2026.
 
+Mise à jour - 2026-09-18
+
+Périmètre : actualités publiées ou signalées entre le 11 et le 18 septembre 2026.
+
+## Hyperscalers et infrastructure cloud
+- **AWS — extension d’Amazon Elastic VMware Service (EVS)** : AWS annonce la disponibilité d’Amazon EVS dans des régions supplémentaires. Cette extension facilite les stratégies de migration VMware vers AWS, mais ne supprime pas les enjeux de coûts de licence, de capacité et de dépendance à l’écosystème Broadcom.
+- **AWS — capacité GPU** : les instances EC2 P6-B200 sont annoncées dans la région Asie-Pacifique (Hyderabad), ce qui augmente l’accès régional aux GPU NVIDIA Blackwell pour les charges d’entraînement et d’inférence. La tendance confirme la course à la capacité IA plutôt qu’une simple course aux fonctionnalités cloud.
+
+## IA, GPU et data centers
+- **Cerebras** prévoit six data centers d’inférence IA en Amérique du Nord et en Europe, équipés de milliers de systèmes CS-3. Le positionnement met l’accent sur le débit d’inférence et montre que l’offre cloud IA se diversifie au-delà des instances GPU généralistes.
+- **Civo et Era4** annoncent une offre de cloud IA souverain au Royaume-Uni, combinant l’infrastructure de data centers d’Era4 et la plateforme CivoStack. Pour les organisations européennes, la souveraineté devient un critère d’architecture et de localisation, pas uniquement une clause contractuelle.
+
+## Sécurité, CVE et virtualisation
+- **Microsoft Patch Tuesday de septembre** : Microsoft a corrigé 974 vulnérabilités, un volume record selon The Register. Même si toutes ne concernent pas directement le cloud, la pression de patching sur les environnements Windows, hyperviseurs et plans de management reste élevée.
+- **CVE-2026-85046 (Chrome)** : Google a indiqué qu’un exploit était présent dans la nature lors de la correction du 3 septembre. Les postes d’administration et bastions utilisés pour piloter les environnements cloud doivent être traités comme des composants critiques.
+- Aucun nouvel avis critique VMware/Proxmox clairement confirmé et publié pendant la fenêtre du 11–18 septembre n’a été retenu ; les résultats trouvés renvoient principalement aux annonces et correctifs d’août ou du début septembre.
+
+## Résilience et coûts
+- Aucun incident AWS/Azure/GCP majeur, précisément daté dans la fenêtre du 11–18 septembre, n’a été confirmé par les résultats consultés. Les tableaux de statut des fournisseurs restent la référence opérationnelle ; il faut éviter de déduire une panne à partir de signalements agrégés sans post-mortem.
+- **Point FinOps** : l’extension régionale des GPU et des services VMware augmente le choix, mais aussi la complexité de réservation, de placement des workloads et de suivi des coûts. Priorités recommandées : budgets par produit, attribution des coûts IA, extinction automatique des environnements non productifs et comparaison régulière des coûts de sortie réseau.
+
+À retenir : la semaine confirme trois axes structurants : expansion géographique des capacités IA, montée en puissance des offres cloud souveraines européennes et nécessité de renforcer le patching des plans d’administration. La disponibilité de nouvelles régions ne doit pas masquer les contraintes de coûts, de licences et de résilience.
+
+Sources :
+- AWS, Amazon EVS disponible dans des régions supplémentaires : https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-evs-available-in-additional-regions/
+- AWS, EC2 P6-B200 à Hyderabad : https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ec2-p6-b200-instances-available-asia-pacific-hyderabad/
+- Cerebras, six data centers IA en Amérique du Nord et en Europe : https://www.datacenterdynamics.com/en/news/cerebras-plans-six-new-ai-data-centers-in-north-america-and-europe/
+- Civo/Era4, cloud IA souverain au Royaume-Uni : https://www.datacenterdynamics.com/en/news/civo-and-era4-launch-sovereign-ai-cloud-offering-in-the-uk/
+- The Register, Patch Tuesday Microsoft de septembre 2026 : https://www.theregister.com/security/2026/09/09/microsoft-breaks-patch-tuesday-record-with-974-cve-deluge/
+- AWS, actualités et annonces : https://aws.amazon.com/new/
+- Google Cloud Service Health : https://status.cloud.google.com/incidents.json
 
 Sources :
 - VMware vCenter CVE (SecurityWeek) : https://www.securityweek.com/critical-vmware-vcenter-vulnerability-in-attackers-crosshairs/
