@@ -421,6 +421,27 @@ Sources :
 - AWS, actualités et annonces : https://aws.amazon.com/new/
 - Google Cloud Service Health : https://status.cloud.google.com/incidents.json
 
+
+Mise à jour - 2026-09-25
+
+Périmètre : actualités publiées ou signalées entre le 19 et le 25 septembre 2026.
+
+## Hyperscalers et IA
+- **AWS publie Strands**, un framework open source pour agents IA. AWS affirme que l’outil atteint des résultats comparables à ceux de solutions concurrentes avec environ un quart de tokens en moins sur certains benchmarks. Pour l’infrastructure cloud, le signal important est le déplacement de la concurrence vers la couche d’orchestration agentique et l’efficacité d’exécution, au-delà de la seule disponibilité GPU.
+
+## GPU et cloud IA
+- Les recherches de la semaine font ressortir la poursuite du financement des clouds GPU spécialisés (Lambda, Together AI, GMI Cloud, CoreWeave et TensorWave), mais les annonces les mieux documentées sont datées des 16–17 septembre et se situent donc hors de la fenêtre stricte retenue. Elles restent un indicateur de tendance, pas une actualité de cette semaine.
+
+## Sécurité, virtualisation et résilience
+- Aucun nouvel avis critique cloud/hyperviseur suffisamment confirmé par une source éditeur ou un bulletin de sécurité de référence n’a été retenu pour la fenêtre du 19–25 septembre. Les résultats non primaires concernant VMware/vCenter et des « zero-days » ont été écartés.
+- Aucun incident AWS, Azure ou GCP majeur et précisément documenté par un post-mortem fournisseur n’a été confirmé dans la fenêtre. Un incident GitLab signalé le 25 septembre ne constitue pas une panne d’hyperscaler et n’est pas inclus comme telle.
+
+## FinOps et souveraineté
+- Aucun lancement ou changement de tarification multicloud/FinOps suffisamment nouveau et vérifiable n’a été identifié cette semaine. Les résultats renvoient principalement à des guides et analyses antérieurs.
+- Les résultats sur la souveraineté européenne cette semaine sont surtout des analyses de règles et d’offres déjà annoncées ; aucune nouvelle décision opérationnelle clairement datée n’a été retenue.
+
+À retenir : l’information la plus directement nouvelle est l’arrivée de Strands chez AWS, qui confirme que les hyperscalers cherchent à capter la couche d’exécution des agents IA. Le reste de la veille ne fournit pas de changement confirmé justifiant une alerte sur les vulnérabilités, les pannes, les coûts ou la souveraineté.
+
 Sources :
 - VMware vCenter CVE (SecurityWeek) : https://www.securityweek.com/critical-vmware-vcenter-vulnerability-in-attackers-crosshairs/
 - VMware vCenter exploitation APT (Vici Security) : https://www.vicisecurity.com/blog/critical-flaws-exploited-within-days-august-2026-patch-window/
