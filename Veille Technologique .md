@@ -443,6 +443,9 @@ Périmètre : actualités publiées ou signalées entre le 19 et le 25 septembre
 À retenir : l’information la plus directement nouvelle est l’arrivée de Strands chez AWS, qui confirme que les hyperscalers cherchent à capter la couche d’exécution des agents IA. Le reste de la veille ne fournit pas de changement confirmé justifiant une alerte sur les vulnérabilités, les pannes, les coûts ou la souveraineté.
 
 Sources :
+- AWS Strands / The Register (21 septembre 2026) : https://www.theregister.com/ai-and-ml/2026/09/21/aws-bolts-together-open-source-agent-harness-says-it-sips-fewer-tokens-than-rivals/5297915
+- Clouds GPU spécialisés / Data Center Dynamics (16–17 septembre, hors fenêtre stricte) : https://www.datacenterdynamics.com/en/news/ai-cloud-firm-together-ai-raises-305m-in-series-b-funding-round/
+- Statut GitLab consulté : https://status.gitlab.com/
 - VMware vCenter CVE (SecurityWeek) : https://www.securityweek.com/critical-vmware-vcenter-vulnerability-in-attackers-crosshairs/
 - VMware vCenter exploitation APT (Vici Security) : https://www.vicisecurity.com/blog/critical-flaws-exploited-within-days-august-2026-patch-window/
 - VMM Escape Glasswing (Decryption Digest) : https://www.decryptiondigest.com/blog/vmm-escape-cve-2026-glasswing-hypervisor-security
