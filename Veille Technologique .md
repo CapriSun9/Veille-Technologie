@@ -480,3 +480,34 @@ Sources :
 - VMware licensing guide (Schneider.im) : https://www.schneider.im/vmware-by-broadcom-portfolio-simplification-and-transition-to-subscription/
 - VMware licensing cloud providers (Acronis) : https://www.acronis.com/en/blog/posts/vmware-licensing-changes/
 - VMware licensing stabilization (Stormagic) : https://stormagic.com/company/blog/vmware-licensing-changes/
+
+Mise à jour - 2026-10-02
+
+Périmètre : actualités publiées ou signalées entre le 26 septembre et le 2 octobre 2026.
+
+## Hyperscalers, résilience et cloud hybride
+- **Azure : incident de maintenance affectant les connexions hybrides** : un événement débuté le 30 septembre à 20:30 UTC a perturbé Azure ExpressRoute Gateway et Azure VPN Gateway, avec des effets sur des réseaux on-premise connectés à Azure et certains services VMware dans le cloud. Microsoft a suspendu l’activité de servicing associée ; l’incident rappelle qu’une opération de maintenance sur le plan réseau peut dépasser le périmètre d’une seule région et toucher les architectures hybrides.
+- **AWS — fédération d’identité sortante via VPC** : AWS a annoncé le 25 septembre la prise en charge de la fédération d’identité sortante IAM via des endpoints d’interface VPC. Cela permet de réduire l’exposition Internet des flux OIDC/STS et de mieux intégrer les workloads privés avec des fournisseurs d’identité externes.
+- **AWS — résilience DocumentDB** : les retryable writes sont disponibles depuis le 28 septembre pour Amazon DocumentDB compatible MongoDB ; elles améliorent le comportement lors d’interruptions réseau transitoires et de bascules du primaire.
+
+## IA, GPU et infrastructure
+- **GMI Cloud lève 668 M$** : le fournisseur de cloud GPU a annoncé le 1er octobre une nouvelle levée destinée à accélérer son expansion mondiale d’infrastructure IA et ses services d’inférence. Le montant confirme la capacité des neoclouds à attirer des financements importants, mais renforce aussi la question de la soutenabilité du capex, de l’électricité et de la disponibilité des GPU.
+- La semaine confirme une course aux infrastructures IA très capital-intensive : les hyperscalers et neoclouds cherchent à sécuriser simultanément GPU, énergie, data centers et logiciels d’orchestration. La diversification des fournisseurs améliore le choix, sans supprimer les risques de dépendance à la capacité physique et aux composants NVIDIA.
+
+## Sécurité, virtualisation et Proxmox
+- Aucun nouvel avis **cloud/hyperviseur** critique, clairement confirmé par un bulletin éditeur ou le catalogue CISA KEV dans la fenêtre du 26 septembre au 2 octobre, n’a été retenu. Les résultats disponibles renvoient principalement aux vulnérabilités VMware et aux avis de septembre déjà documentés.
+- Aucun nouveau communiqué Proxmox produit suffisamment significatif n’a été identifié cette semaine. Le lancement du support entreprise 24/7 (à compter du 19 octobre) et de Proxmox North America reste l’évolution récente de référence.
+
+## FinOps, souveraineté et VMware/Broadcom
+- Aucun changement de tarification multicloud/FinOps ou nouvelle décision européenne de souveraineté suffisamment daté et vérifiable n’a été identifié cette semaine. Les recommandations restent : attribution des coûts IA, extinction des environnements inutilisés, suivi du coût de sortie réseau et vérification de la juridiction du fournisseur.
+- Aucun nouveau changement de licence Broadcom/VMware clairement annoncé dans la période. La pression reste néanmoins forte autour du modèle par abonnement et par cœurs physiques, ce qui continue de rendre Proxmox/KVM et le cloud public pertinents dans les études d’alternative.
+
+À retenir : l’événement opérationnel principal est l’incident Azure de maintenance ayant perturbé ExpressRoute et VPN Gateway. Côté marché, la levée de 668 M$ de GMI Cloud illustre l’accélération des neoclouds GPU. Les sujets CVE, Proxmox, FinOps, souveraineté et licences VMware n’apportent pas de nouveauté suffisamment confirmée cette semaine.
+
+Sources :
+- Incident Azure ExpressRoute/VPN Gateway (The Register, 1 octobre 2026) : https://www.theregister.com/off-prem/2026/10/01/azure-maintenance-mess-disrupts-hybrid-clouds-vpns-cloudy-vmware-services/
+- AWS IAM outbound identity federation via VPC (25 septembre 2026) : https://aws.amazon.com/about-aws/whats-new/2026/09/aws-sts-vpc-oidc/
+- AWS DocumentDB retryable writes (28 septembre 2026) : https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-documentdb-retryable-writes/
+- GMI Cloud — levée de 668 M$ (1 octobre 2026) : https://www.prnewswire.com/apac/news-releases/gmi-cloud-raises-over-660-million-to-accelerate-global-ai-infrastructure-expansion-302894628.html
+- Proxmox — support 24/7 et Proxmox North America : https://www.proxmox.com/en/about/company-details/press-releases/proxmox-24-7-support-and-proxmox-north-america/
+- CISA Known Exploited Vulnerabilities Catalog : https://www.cisa.gov/known-exploited-vulnerabilities-catalog
