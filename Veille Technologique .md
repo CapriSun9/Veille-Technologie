@@ -511,3 +511,31 @@ Sources :
 - GMI Cloud — levée de 668 M$ (1 octobre 2026) : https://www.prnewswire.com/apac/news-releases/gmi-cloud-raises-over-660-million-to-accelerate-global-ai-infrastructure-expansion-302894628.html
 - Proxmox — support 24/7 et Proxmox North America : https://www.proxmox.com/en/about/company-details/press-releases/proxmox-24-7-support-and-proxmox-north-america/
 - CISA Known Exploited Vulnerabilities Catalog : https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+
+
+Mise à jour - 2026-10-09
+
+Périmètre : actualités publiées ou signalées entre le 3 et le 9 octobre 2026.
+
+## Hyperscalers, résilience et cloud hybride
+- **Les dépendances cloud restent un sujet de souveraineté opérationnelle** : l’administration fiscale néerlandaise revient sur le déploiement de Microsoft 365 et privilégie une alternative on-premise, après les réserves émises par le conseil consultatif ICT néerlandais. Le cas illustre que la réversibilité, la maîtrise des données et la continuité de service peuvent primer sur la généralisation du SaaS dans les organismes publics.
+- Aucun nouvel incident AWS/Azure/GCP clairement confirmé par une source primaire ou un bulletin d’incident n’a été retenu dans la fenêtre étudiée.
+
+## Sécurité, virtualisation et Proxmox
+- Aucun nouvel avis critique spécifiquement Proxmox/hyperviseur n’a été suffisamment confirmé dans les résultats de la semaine. La prochaine évolution Proxmox déjà annoncée reste le support entreprise 24/7 à partir du 19 octobre.
+
+## IA, GPU et infrastructure
+- Les résultats de la semaine ne font pas apparaître d’annonce hyperscaler/GPU suffisamment documentée et directement nouvelle à retenir. La tendance demeure une forte demande d’infrastructure IA, avec une pression corrélée sur la capacité électrique, les GPU et le financement des neoclouds.
+
+## FinOps, souveraineté et VMware/Broadcom
+- **Sortie de VMware envisagée par une large majorité de clients** : une enquête citée par The Register indique que neuf clients VMware sur dix envisagent une sortie, tandis que 48 % déclarent ne pas prévoir de migrer leurs actifs vers VMware Cloud Foundation, la plateforme d’abonnement privilégiée par Broadcom. Ce signal renforce l’intérêt d’évaluer KVM/Proxmox, les offres cloud et les coûts de migration avant tout renouvellement.
+- Broadcom/VMware met en avant une étude Forrester commandée par Broadcom sur les bénéfices opérationnels de VMware Cloud Foundation 9.1. Cette communication doit être mise en regard des signaux de marché précédents et de la nécessité de distinguer étude sponsorisée, coût total et retours clients indépendants.
+- La recherche de cette semaine n’a pas identifié de nouvelle annonce réglementaire européenne ou de changement FinOps multicloud suffisamment daté et vérifiable.
+
+À retenir : la semaine apporte surtout un signal de souveraineté et de réversibilité avec le recul du fisc néerlandais sur Microsoft 365, et un signal de marché défavorable à VMware malgré la promotion de VCF 9.1 par Broadcom. Aucun nouvel événement Proxmox ou panne majeure des trois hyperscalers n’a été confirmé.
+
+Sources :
+- Dutch tax office abandons Microsoft 365 (The Register, 7 octobre 2026) : https://www.theregister.com/on-prem/2026/10/07/dutch-tax-office-ditches-microsoft-365-cloud-for-on-premises-alternative/
+- VMware customers consider exit amid licensing costs (The Register, 7 octobre 2026) : https://www.theregister.com/virtualization/2026/10/07/nine-in-10-vmware-customers-eye-the-exit-as-licensing-bills-bite/
+- Forrester study on VMware Cloud Foundation 9.1 (VMware by Broadcom, 5 octobre 2026) : https://blogs.vmware.com/cloud-foundation/2026/10/05/forrester-spotlight-finds-that-vmware-cloud-foundation-streamlines-private-cloud-operations/
+- Proxmox — support entreprise 24/7 à partir du 19 octobre : https://www.proxmox.com/en/about/company-details/press-releases/proxmox-24-7-support-and-proxmox-north-america/
