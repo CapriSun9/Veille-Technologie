@@ -534,7 +534,40 @@ Périmètre : actualités publiées ou signalées entre le 3 et le 9 octobre 202
 
 À retenir : la semaine apporte surtout un signal de souveraineté et de réversibilité avec le recul du fisc néerlandais sur Microsoft 365, et un signal de marché défavorable à VMware malgré la promotion de VCF 9.1 par Broadcom. Aucun nouvel événement Proxmox ou panne majeure des trois hyperscalers n’a été confirmé.
 
+Mise à jour - 2026-10-16
+
+Périmètre : actualités publiées ou signalées entre le 10 et le 16 octobre 2026.
+
+## Hyperscalers, résilience et cloud hybride
+- **Google Cloud Storage : incident du 8 octobre** : Google a publié un rapport préliminaire sur une panne touchant Cloud Storage, liée à une optimisation du tri du trafic ayant provoqué une forte consommation de ressources sur certains nœuds de stockage en `us-central1`, aggravée par un problème distinct du service de base de données. Le cas rappelle qu’une dépendance à des services de contrôle et de métadonnées peut amplifier un incident régional.
+- **AWS Lambda Web Functions** : AWS a annoncé une nouvelle primitive serverless permettant à une application de traiter directement des requêtes HTTP en écoutant sur un port. Cette évolution rapproche Lambda d’un modèle d’exécution web plus direct, avec un intérêt potentiel pour les applications conteneurisées légères mais un besoin de vérifier les limites, la facturation et la portabilité.
+- **Google Cloud Modernize** : Google Cloud a présenté une offre de modernisation pilotée par l’IA pour accélérer l’analyse et la transformation des applications. Le mouvement confirme que les hyperscalers cherchent à monétiser non seulement le calcul, mais aussi l’accompagnement automatisé des migrations et de la modernisation.
+
+## IA, GPU et infrastructure
+- **NVIDIA met en avant l’échelle des AI factories** : lors de l’OCP Global Summit, NVIDIA a présenté des briques réseau et de distribution de trafic destinées à faire évoluer les infrastructures au-delà de 100 000 GPU. Cela souligne que le goulot d’étranglement se déplace de la seule disponibilité des accélérateurs vers l’interconnexion, la topologie réseau, le refroidissement et l’efficacité opérationnelle.
+- La recherche n’a pas fait ressortir cette semaine de nouvelle capacité GPU européenne ou de levée de fonds suffisamment documentée pour être ajoutée comme fait majeur. La tendance reste une industrialisation très capitalistique des neoclouds et des clusters IA.
+
+## Sécurité, virtualisation et Proxmox
+- Aucun nouvel avis critique spécifiquement cloud/hyperviseur, confirmé par un bulletin éditeur ou le catalogue CISA KEV dans la fenêtre étudiée, n’a été retenu. Le résultat CVE critique HPE iLO 7 identifié concerne la gestion de serveurs et non une vulnérabilité de virtualisation/cloud ; il est donc conservé hors de cette veille ciblée.
+- **Proxmox — support entreprise 24/7** : Proxmox annonce la disponibilité mondiale d’un support entreprise 24/7 à compter du 19 octobre 2026 et le lancement de Proxmox North America. Cette évolution renforce la crédibilité de Proxmox pour des environnements de production répartis sur plusieurs fuseaux horaires, sans modifier à elle seule le modèle produit ou la stratégie de migration.
+
+## FinOps, souveraineté et VMware/Broadcom
+- **FinOps AWS pour Bedrock** : Cost Explorer, Budgets et les tableaux de bord AWS Cost Management permettent désormais d’analyser les coûts Amazon Bedrock par attributs de produit : modèle, fournisseur de modèle, type d’inférence et fonctionnalité. C’est un progrès concret pour l’allocation des coûts IA et la comparaison coût/usage par équipe ou cas d’usage.
+- Aucun nouveau changement de licence Broadcom/VMware, décision européenne de souveraineté ou annonce multicloud FinOps suffisamment daté et vérifiable n’a été identifié dans la fenêtre. Les signaux précédents restent d’actualité : abonnement et coût par cœur côté VMware, importance de la réversibilité, et nécessité d’attribuer précisément les dépenses IA.
+
+À retenir : la nouveauté opérationnelle principale est l’incident Google Cloud Storage du 8 octobre. AWS pousse simultanément l’observabilité des coûts Bedrock et une primitive HTTP pour Lambda, tandis que Google et NVIDIA renforcent le positionnement de l’IA comme moteur de modernisation et d’infrastructure. Proxmox améliore son dispositif de support ; aucun nouveau CVE cloud/hyperviseur ou changement VMware/Broadcom suffisamment confirmé n’a été retenu.
+
+
 Sources :
+- Rapport d’incident Google Cloud Storage du 8 octobre 2026 : https://blog.incidenthub.cloud/2026-10-12-google-cloud-storage-outage-oct-8-2026
+- Statut Google Cloud — incident associé : https://status.cloud.google.com/incidents/J5ia5t9p3g9Q5Wi7r8Ev
+- AWS Lambda Web Functions (12 octobre 2026) : https://aws.amazon.com/about-aws/whats-new/2026/10/aws-lambda-web-functions/
+- AWS Cost Management pour Amazon Bedrock (8 octobre 2026) : https://aws.amazon.com/about-aws/whats-new/2026/10/aws-bedrock-attributes-in-cost-explorer/
+- Google Cloud Modernize (6 octobre 2026) : https://cloud.google.com/blog/products/infrastructure-modernization/google-cloud-modernize-accelerate-transformation-with-ai
+- NVIDIA — AI factories et réseau à l’échelle (12 octobre 2026) : https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/
+- Proxmox — support 24/7 et Proxmox North America : https://forum.proxmox.com/threads/proxmox-announces-global-24-7-enterprise-support-and-launches-proxmox-north-america-inc.186140/
+- CISA Known Exploited Vulnerabilities Catalog : https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+
 - Dutch tax office abandons Microsoft 365 (The Register, 7 octobre 2026) : https://www.theregister.com/on-prem/2026/10/07/dutch-tax-office-ditches-microsoft-365-cloud-for-on-premises-alternative/
 - VMware customers consider exit amid licensing costs (The Register, 7 octobre 2026) : https://www.theregister.com/virtualization/2026/10/07/nine-in-10-vmware-customers-eye-the-exit-as-licensing-bills-bite/
 - Forrester study on VMware Cloud Foundation 9.1 (VMware by Broadcom, 5 octobre 2026) : https://blogs.vmware.com/cloud-foundation/2026/10/05/forrester-spotlight-finds-that-vmware-cloud-foundation-streamlines-private-cloud-operations/
