@@ -90,15 +90,6 @@ Pour un technicien ou administrateur SISR, ces choix ont des conséquences concr
 - **VMware/Broadcom :** le modèle d’abonnement et la facturation par cœur rendent essentiels l’inventaire des cœurs, l’analyse des renouvellements et le calcul des coûts de migration. La veille rapporte aussi des minima de facturation et des conditions de licence relayés par des sources tierces ; ces conditions doivent être vérifiées dans le contrat applicable avant toute décision.
 - **Cloud souverain :** l’arbitrage ne se limite pas au prix ou à l’emplacement des serveurs ; il inclut la juridiction, les responsabilités d’exploitation, les garanties de réversibilité et les compétences nécessaires. Le cadre européen de juin 2026 et les choix d’Airbus/Scaleway sont des exemples présents dans cette veille.
 
-## Conclusion — tendances et intérêt professionnel
-
-Sur la période étudiée, quatre tendances ressortent : **la virtualisation évolue** (nouvelles versions, ARM64 et gestion de clusters) ; **le cloud se développe autour de l’IA**, ce qui accroît les besoins en GPU, réseau, stockage, énergie et centres de données ; **la sécurité et la disponibilité dépendent d’une chaîne complète**, de l’hyperviseur aux services cloud et aux outils d’administration ; enfin, **les coûts, la souveraineté et la réversibilité** pèsent davantage dans le choix des architectures.
-
-Pour un futur administrateur systèmes et réseaux, ces actualités montrent l’intérêt de savoir maintenir et mettre à jour un hyperviseur, surveiller les journaux et les alertes, isoler les réseaux, sauvegarder et tester la restauration, planifier la continuité de service et suivre les consommations. À l’oral, elles permettent de relier les choix techniques (VMware, Proxmox/KVM, cloud public ou hybride) à des critères professionnels : sécurité, disponibilité, coût total, compétences de l’équipe et capacité à changer de solution.
-
----
-*Les éléments de cette synthèse reprennent les faits, dates et références présents dans le fichier source. Les formulations d’origine contenant des estimations, des annonces d’éditeur ou des informations rapportées par des médias ont été présentées comme telles ; elles ne sont pas transformées en constats indépendamment vérifiés.*
-
 ## Veille hebdomadaire — 22 novembre 2026
 
 - **29 octobre 2026 — Proxmox VE et Lightbits.** Proxmox annonce une intégration native du stockage Lightbits sur NVMe/TCP pour les machines virtuelles. **Intérêt BTS SIO SISR :** comparer les solutions de stockage partagé, la migration à chaud et les besoins réseau d'un cluster. [Source : Proxmox](https://www.proxmox.com/en/about/company-details/press-releases)
@@ -112,3 +103,12 @@ Pour un futur administrateur systèmes et réseaux, ces actualités montrent l�
 - **16 novembre 2026 — Amazon OpenSearch Service : reprise après sinistre interrégionale.** AWS annonce une fonctionnalité gérée de reprise après sinistre entre deux régions pour les domaines OpenSearch compatibles, avec des objectifs annoncés de perte de données inférieure à une minute et de reprise inférieure à vingt minutes. **Intérêt BTS SIO SISR :** distinguer RPO et RTO, organiser les bascules et tester un plan de continuité. [Source : AWS](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/)
 
 - **16 novembre 2026 — Amazon CloudWatch Logs : politiques de rétention au niveau du compte.** AWS permet d'appliquer des règles de conservation des journaux à plusieurs groupes de logs. **Intérêt BTS SIO SISR :** définir une politique de journalisation cohérente pour la supervision, les investigations de sécurité et la maîtrise des coûts. [Source : AWS](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/)
+
+## Conclusion — tendances et intérêt professionnel
+
+Sur la période étudiée, quatre tendances ressortent : **la virtualisation évolue** (nouvelles versions, ARM64 et gestion de clusters) ; **le cloud se développe autour de l’IA**, ce qui accroît les besoins en GPU, réseau, stockage, énergie et centres de données ; **la sécurité et la disponibilité dépendent d’une chaîne complète**, de l’hyperviseur aux services cloud et aux outils d’administration ; enfin, **les coûts, la souveraineté et la réversibilité** pèsent davantage dans le choix des architectures.
+
+Pour un futur administrateur systèmes et réseaux, ces actualités montrent l’intérêt de savoir maintenir et mettre à jour un hyperviseur, surveiller les journaux et les alertes, isoler les réseaux, sauvegarder et tester la restauration, planifier la continuité de service et suivre les consommations. À l’oral, elles permettent de relier les choix techniques (VMware, Proxmox/KVM, cloud public ou hybride) à des critères professionnels : sécurité, disponibilité, coût total, compétences de l’équipe et capacité à changer de solution.
+
+---
+*Les éléments de cette synthèse reprennent les faits, dates et références présents dans le fichier source. Les formulations d’origine contenant des estimations, des annonces d’éditeur ou des informations rapportées par des médias ont été présentées comme telles ; elles ne sont pas transformées en constats indépendamment vérifiés.*
