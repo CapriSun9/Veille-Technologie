@@ -98,3 +98,17 @@ Pour un futur administrateur systèmes et réseaux, ces actualités montrent l�
 
 ---
 *Les éléments de cette synthèse reprennent les faits, dates et références présents dans le fichier source. Les formulations d’origine contenant des estimations, des annonces d’éditeur ou des informations rapportées par des médias ont été présentées comme telles ; elles ne sont pas transformées en constats indépendamment vérifiés.*
+
+## Veille hebdomadaire — 22 novembre 2026
+
+- **29 octobre 2026 — Proxmox VE et Lightbits.** Proxmox annonce une intégration native du stockage Lightbits sur NVMe/TCP pour les machines virtuelles. **Intérêt BTS SIO SISR :** comparer les solutions de stockage partagé, la migration à chaud et les besoins réseau d'un cluster. [Source : Proxmox](https://www.proxmox.com/en/about/company-details/press-releases)
+
+- **5 novembre 2026 — Proxmox VE et Everpure FlashArray.** Le partenariat étend les options de stockage d'entreprise pour Proxmox VE. **Intérêt BTS SIO SISR :** étudier les architectures SAN, la haute disponibilité et la compatibilité des solutions de virtualisation. [Source : Proxmox](https://www.proxmox.com/en/about/company-details/press-releases)
+
+- **9 novembre 2026 — AWS Nitro Sandboxes.** AWS rend disponibles des VM légères isolées matériellement pour les pods EKS, les tâches ECS et des charges EC2. **Intérêt BTS SIO SISR :** distinguer isolation par conteneur et isolation par hyperviseur et étudier la protection des environnements multitenants. [Source : AWS](https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/)
+
+- **11 novembre 2026 — AWS Emulator.** AWS présente un émulateur local open source pour tester des interactions avec ses API sans provisionner systématiquement des ressources cloud. L'émulation ne reproduit pas tous les contrôles IAM ni les comportements interrégionaux. **Intérêt BTS SIO SISR :** tester des automatisations cloud localement, puis valider la sécurité et les configurations dans un environnement AWS réel. [Source : AWS, récapitulatif du 16 novembre](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/)
+
+- **16 novembre 2026 — Amazon OpenSearch Service : reprise après sinistre interrégionale.** AWS annonce une fonctionnalité gérée de reprise après sinistre entre deux régions pour les domaines OpenSearch compatibles, avec des objectifs annoncés de perte de données inférieure à une minute et de reprise inférieure à vingt minutes. **Intérêt BTS SIO SISR :** distinguer RPO et RTO, organiser les bascules et tester un plan de continuité. [Source : AWS](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/)
+
+- **16 novembre 2026 — Amazon CloudWatch Logs : politiques de rétention au niveau du compte.** AWS permet d'appliquer des règles de conservation des journaux à plusieurs groupes de logs. **Intérêt BTS SIO SISR :** définir une politique de journalisation cohérente pour la supervision, les investigations de sécurité et la maîtrise des coûts. [Source : AWS](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/)
